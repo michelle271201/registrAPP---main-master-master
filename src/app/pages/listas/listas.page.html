@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar color="duocb">
+    <ion-buttons slot="start">
+      <ion-buttons slot="start">
+        <ion-menu-button menu="first" color="duocy"></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Lista</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onClick()">
+        <ion-icon slot="icon-only" [name]="favorito ? 'heart':'heart-outline' "></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <h4 class="ion-text-center">Asistente</h4>
+  <br>
+  <ion-card id="card" color="duocy" >
+    <div class="img-wrapper">
+      <img src="./assets/imgs/men-1.jpg" />
+      <ion-button color="light">
+        <ion-icon slot="icon-only" name="camera-outline" color="medium">
+        </ion-icon>
+      </ion-button>
+    </div>
+    <ion-card-content class="ion-text-center text">
+      <h2 color="duocb">{{nombre}}</h2>
+      <ion-text color="medium">
+        <div style="display: block" class="ion-justify-content-center">
+          <!-- <ion-icon name="location-outline" color="medium">
+          </ion-icon> -->
+          <p> {{RegFecha}}  {{RegHora}} </p>
+          <p> {{RegCurso}} </p>
+          <p> {{RegSeccion}} </p>
+        </div>
+      </ion-text>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card-header>
+    <ion-card-subtitle>Asistentes</ion-card-subtitle>
+  </ion-card-header>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-item *ngFor="let c of item; let i = index">
+    <ion-card>
+      <ion-col size="8">{{c.name}}</ion-col>
+      <ion-col size="6">
+        <ion-icon color="duocb"></ion-icon>seccion {{c.secci}}
+      </ion-col>
+      <ion-col size="6">
+        <ion-icon color="duocb"></ion-icon>{{ horac }}
+      </ion-col>
+      <ion-col size="6">
+        <ion-icon color="duocb"></ion-icon> {{fecha}}
+      </ion-col>
+    </ion-card>
+  </ion-item>
+
+  <ion-infinite-scroll threshold="200px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="cargando....">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

@@ -1,0 +1,25 @@
+<app-header titulo="Asistencia"></app-header>
+
+<ion-content>
+  <ion-list-header class="ion-text-center ion-padding">
+    <ion-label>Registro de asistencia</ion-label>
+  </ion-list-header>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>{{curso}}</ion-card-subtitle>
+    </ion-card-header>
+  <ion-grid fixed class="ion-padding">
+    <ion-row>
+      <ion-col size="6">FECHA</ion-col>
+      <ion-col size="6">  ASISTENCIA</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let item of cursoData" >
+      <ion-col size="6">{{item.CurrentDate}}</ion-col>
+      <ion-col size="6"><ion-icon name="checkmark-done-outline" color="duocb"></ion-icon>PRESENTE</ion-col>
+    </ion-row>
+  </ion-grid>
+
+    
+  </ion-card>
+  
+</ion-content>
