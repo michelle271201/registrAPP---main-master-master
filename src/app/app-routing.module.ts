@@ -57,7 +57,13 @@ const routes: Routes = [
     path: 'homedocente',
     loadChildren: () => import('./pages/homedocente/homedocente.module').then( m => m.HomedocentePageModule)
   },
+  
+  {
+    path: 'create-class',
+    loadChildren: () => import('./create-class/create-class.module').then( m => m.CreateClassPageModule)
+  },
 ];
+
 
 @NgModule({
   imports: [

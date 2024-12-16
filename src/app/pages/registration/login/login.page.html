@@ -15,7 +15,7 @@
       <ion-input required formControlName="password" name="password" type="password" placeholder="Ingresa tu contraseña" color="medium"></ion-input> <!-- Gris por defecto -->
     </ion-item>
     <br>
-    <ion-button block color="duocy" type="submit" [disabled]="frmlogin.invalid">
+    <ion-button block color="duocy" type="submit" [disabled]="frmlogin.invalid" click="redirectToHome()">
       Iniciar
     </ion-button>
     <ion-button routerLink="/reg" color="duocb">

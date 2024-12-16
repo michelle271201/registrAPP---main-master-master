@@ -3,24 +3,38 @@
        {
           "nombre": "Michelle vega",
           "usr": "mic.vega",
-          "password": "mic123",
+          "password": "1234",
           "email": "mic.vega@duocuc.cl",
           "tipo": "alumno"
        },
        {
+         "nombre": "Agustin vega",
+         "usr": "agus.vega",
+         "password": "1234",
+         "email": "agus.vega@duocuc.cl",
+         "tipo": "alumno"
+      },
+       {
           "nombre": "Catalina Gonzalez",
           "usr": "cata.gonzalez",
-          "password": "cata123",
+          "password": "1234",
           "email": "cata.gonzalez@duocuc.cl",
           "tipo": "alumno"
        },
        {
           "nombre": "Blanca Hidalgo",
           "usr": "blan.hidalgo",
-          "password": "blanca12",
+          "password": "1234",
           "email": "blan.hidalgo@duocuc.cl",
           "tipo": "alumno"
        },
+       {
+         "nombre": "Mabel Herrera",
+         "usr": "mabe.herrera",
+         "password": 1234,
+         "email": "mabe.h@profesorduoc.cl",
+         "tipo": "profesor"
+      },
        {
           "nombre": "Alejandro Sepulveda",
           "usr": "alej.sepulveda",

@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { QRCodeModule } from 'angularx-qrcode';
 import { EmailComposer } from '@awesome-cordova-plugins/email-composer/ngx';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
+
 
 
 @NgModule({
@@ -18,7 +20,8 @@ import { EmailComposer } from '@awesome-cordova-plugins/email-composer/ngx';
             NgxQRCodeModule,
             QRCodeModule,
             IonicModule.forRoot(),
-            AppRoutingModule,  
+            AppRoutingModule, 
+            ReactiveFormsModule, 
             IonicStorageModule.forRoot(), 
             HttpClientModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, EmailComposer], 
